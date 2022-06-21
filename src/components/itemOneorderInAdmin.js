@@ -98,26 +98,26 @@ const ItemOneOrderInAdmin = ({id,count, complete, mobile, createdAt, updatedAt, 
             {/*modal confirm change status*/}
             <Modal show={modalStatus} onHide={handleCloseStatus}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Please confirm</Modal.Title>
+                    <Modal.Title>Подтверждение</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    Do you want changes status for this order(id: {id}), from {complete ? '\'Completed\'' : '\'In progress\''} to {complete ? '\'In progress\'' : '\'Completed\''}?
+                    Вы хотите изменить статус для заказа номер:{id}, c {complete ? '\'Выполнен\'' : '\'Выполняется\''} на {complete ? '\'Выполняется\'' : '\'Выполнен\''}?
                     <br/><br/>
-                    Data:
+                    Данные:
                     <ul>
-                        <li>mobile: {mobile}</li>
-                        <li>Order CreatedAt: {formatDate(createdAt)}</li>
+                        <li>Номер телефона: {mobile}</li>
+                        <li>Дата создания: {formatDate(createdAt)}</li>
                         {complete ? `Order completed: ${formatDate(updatedAt)}` : false}
-                        <li>Status: {complete ? 'Completed' : `In progress`}</li>
-                        <li>{userId ? 'Buyer registered' : `Buyer not registered`}</li>
+                        <li>Статус: {complete ? 'Выполнен' : `Выполняется`}</li>
+                        <li>{userId ? 'Пользователь зарегистрирован' : `Пользователь не зарегистрирован`}</li>
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseStatus}>
-                        Cancel
+                        Отмена
                     </Button>
                     <Button variant="primary" onClick={changeStatusOrder}>
-                        Confirm
+                        Подтвердить
                     </Button>
                 </Modal.Footer>
             </Modal>
@@ -125,26 +125,26 @@ const ItemOneOrderInAdmin = ({id,count, complete, mobile, createdAt, updatedAt, 
             {/*modal confirm delete order*/}
             <Modal show={modalDelete} onHide={handleCloseDelete}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Please confirm</Modal.Title>
+                    <Modal.Title>Подтверждение</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    Do you want delete this order(id: {id})?
+                    Вы хотите удалить заказ номер:{id}?
                     <br/><br/>
-                    Data:
+                    Данные:
                     <ul>
-                        <li>mobile: {mobile}</li>
-                        <li>Order CreatedAt: {formatDate(createdAt)}</li>
+                        <li>Номер телефона: {mobile}</li>
+                        <li>Дата создания: {formatDate(createdAt)}</li>
                         {complete ? `Order completed: ${formatDate(updatedAt)}` : false}
-                        <li>Status: {complete ? 'Completed' : `In progress`}</li>
-                        <li>{userId ? 'Buyer registered' : `Buyer not registered`}</li>
+                        <li>Статус: {complete ? 'Выполнен' : `Выполняется`}</li>
+                        <li>{userId ? 'Пользователь зарегистрирован' : `Пользователь не зарегистрирован`}</li>
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseDelete}>
-                        Cancel
+                        Отмена
                     </Button>
                     <Button variant="primary" onClick={deleteOrder}>
-                        Confirm
+                        Подтвердить
                     </Button>
                 </Modal.Footer>
             </Modal>
