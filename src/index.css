@@ -644,3 +644,20 @@ a,a:hover {
     border-radius: 5px;
     padding: 12px 0;
 }
+
+/*Form*/
+
+.sendForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button-conteiner {
+    display: flex;
+    justify-content: center;
+}
