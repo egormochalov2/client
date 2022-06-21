@@ -9,8 +9,8 @@ import {fetchBrands, fetchDevice, fetchTypes} from "../http/deviceAPI";
 import Pages from "../components/Pages";
 import { Link } from 'react-router-dom';
 import tolst from '../assets/tolst.jpg'
-import chex from '../assets/chex.jpg'
-import koft from '../assets/koft.jpg'
+import chex from '../assets/koft.jpg'
+import koft from '../assets/koft.jpeg'
 
 const Shop = observer(() => {
     const {device} = useContext(Context);
