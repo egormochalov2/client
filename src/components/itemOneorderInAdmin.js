@@ -50,32 +50,32 @@ const ItemOneOrderInAdmin = ({id,count, complete, mobile, createdAt, updatedAt, 
                     <Col md={8}>
                         <Row>
                             <Col xs={12}>
-                                <NavLink to={ORDERS_ROUTE + `/${id}`}>id: {id}</NavLink>
+                                <NavLink to={ORDERS_ROUTE + `/${id}`}>Номер заказа: {id}</NavLink>
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12}>
-                                Phone: <a href={`tel:${mobile}`}>{mobile}</a>
+                                Номер телефона: <a href={`tel:${mobile}`}>{mobile}</a>
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12}>
-                                Order created: {formatDate(createdAt)}
+                                Дата создания: {formatDate(createdAt)}
                             </Col>
                         </Row>
                         {complete ? <Row>
                             <Col xs={12}>
-                                Order completed: {formatDate(updatedAt)}
+                                Дата выполнения: {formatDate(updatedAt)}
                             </Col>
                         </Row> : false}
                         <Row>
                             <Col xs={12}>
-                                {userId ? "Buyer: Registered" : "Buyer: Not registered"}
+                                {userId ? "Покупатель: Зарегистрирован" : "Покупатель: Не зарегистрирован"}
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12}>
-                                Status: {complete ? "Completed" : "In progress"}
+                                Статус: {complete ? "Завершен" : "Выполняется"}
                             </Col>
                         </Row>
                     </Col>
@@ -83,12 +83,12 @@ const ItemOneOrderInAdmin = ({id,count, complete, mobile, createdAt, updatedAt, 
                         <Row style={{height: "100%"}} className="d-flex align-items-center">
                             <Col xs={6} className="d-flex justify-content-center">
                                 {complete ?
-                                    <Button variant="success" onClick={handleShowStatus}>Make not complete</Button>
+                                    <Button variant="success" onClick={handleShowStatus}>Отменить завершение</Button>
                                     :
-                                    <Button variant="warning" onClick={handleShowStatus}>Make Completed</Button>}
+                                    <Button variant="warning" onClick={handleShowStatus}>Завершить</Button>}
                             </Col>
                             <Col xs={6} className="d-flex justify-content-center">
-                                <Button variant="danger" onClick={handleShowDelete}>Delete</Button>
+                                <Button variant="danger" onClick={handleShowDelete}>Удалить</Button>
                             </Col>
                         </Row>
                     </Col>
