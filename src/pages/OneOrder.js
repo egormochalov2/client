@@ -36,13 +36,15 @@ const OneOrder = () => {
 
     return (
         <Container className="d-flex flex-column">
-            Order id: {id} <br />
-            Complete: {order?.descr.complete ? "Completed" : "Not complete"} <br />
-            User: {order?.descr.userId ?  order.descr.userId : "User didn't register"} <br />
-            Created: {formatDate(order?.descr.createdAt)} <br />
-            Name : {order?.descr.name}<br />
+            Номер заказа: {id} <br />
+            Статус: {order?.descr.complete ? "Выполнен" : "Не выполнен"} <br />
+            Пользователь: {order?.descr.userId ?  order.descr.userId : "Пользователь не зарегисрирован"} <br />
+            Дата создания: {formatDate(order?.descr.createdAt)} <br />
+            Имя : {order?.descr.name}<br />
+            Фамилия : {order?.descr.secondName}<br />
+            Почта : {order?.descr.email}<br />
             {order?.descr.complete ? formatDate(order.descr.complete.updatedAt) : false }
-            <a href={`tel:${order?.descr.mobile}`}>Mobile: {order?.descr.mobile}</a>
+            <a href={`tel:${order?.descr.mobile}`}>Номер телефона: {order?.descr.mobile}</a>
             <br />
 
             {order?.devices.map( ({count,size,descr}, i) => {
@@ -53,13 +55,13 @@ const OneOrder = () => {
                             <Image width={150} src={process.env.REACT_APP_API_URL + descr.img}/>
                         </Col>
                         <Col xs={10}>
-                            Brand: {descr.brand.name}<br />
-                            Type: {descr.type.name}<br />
-                            Size: {size}<br />
-                            Name: {descr.name}<br />
-                            Price: {descr.price} RUB<br />
-                            Count: {count}<br />
-                            Total price: {count * descr.price} RUB
+                            Тип: {descr.brand.name}<br />
+                            Аниме: {descr.type.name}<br />
+                            Размер: {size}<br />
+                            Название: {descr.name}<br />
+                            Цена: {descr.price}₽<br />
+                            Количество: {count}<br />
+                            Полная цена: {count * descr.price}₽
                         </Col>
                     </Row>
                 )
