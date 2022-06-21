@@ -34,7 +34,7 @@ const Ordering = () => {
     }
     return (
         <Container>
-            <Form>
+            <Form className='sendForm'>
                 <Form.Group>
                     <Form.Label>
                         Номер телефона
@@ -66,15 +66,15 @@ const Ordering = () => {
                     <Form.Label>
                         Почта
                     </Form.Label>
-                    <Form.Control type="email"
+                    <Form.Control  type="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
                 </Form.Group>
             </Form>
             <Row className="mt-3">
-                <Col xs={12}>
-                    <Button variant="secondary" onClick={buy}>Заказать</Button>
+                <Col xs={12} className='button-conteiner'>
+                    <Button className='button-send' variant="success" onClick={buy}>Заказать</Button>
                 </Col>
             </Row>
         </Container>
