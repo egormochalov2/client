@@ -661,3 +661,13 @@ a,a:hover {
     display: flex;
     justify-content: center;
 }
+
+/*Order*/
+
+.order-conteiner {
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+}

@@ -35,7 +35,7 @@ const OneOrder = () => {
     }
 
     return (
-        <Container className="d-flex flex-column">
+        <Container className="d-flex flex-column order-conteiner">
             Номер заказа: {id} <br />
             Статус: {order?.descr.complete ? "Выполнен" : "Не выполнен"} <br />
             Пользователь: {order?.descr.userId ?  order.descr.userId : "Пользователь не зарегисрирован"} <br />
