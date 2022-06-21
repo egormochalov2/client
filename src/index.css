@@ -671,3 +671,56 @@ a,a:hover {
     padding-bottom: 15px;
     margin-top: 30px;
 }
+
+/*Burger*/
+
+.burger-button {
+    display: none;
+    padding: 0;
+    border: none;
+    background: #f3f3f2fd;
+    border-radius: 5px;
+    padding: 0 3px;
+}
+
+.burger-img {
+    width: 36px;
+}
+
+@media(max-width:700px) {
+    .mainPage-conteiner {
+        flex-direction: column;
+    }
+
+    .mainPage-item-conteine {
+        flex: 1;
+        min-height: 400px;
+    }
+
+    .header__brand-list {
+        display: none;
+    }
+
+    .offcanvas-body .header__brand-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-close {
+        margin-left: auto;
+    }
+
+    .burger-button {
+        display: block;
+    }
+
+    .header__nav {
+        gap: 10px;
+    }
+
+    .footer-conteiner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
