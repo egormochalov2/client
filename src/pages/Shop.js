@@ -44,19 +44,19 @@ const Shop = observer(() => {
         <div className="mainPage-conteiner">
             <Col className='mainPage-item-conteine'  md={4}>
             <Image className="mainPage-img" src={tolst}></Image>
-                <Link className="mainPage-item" to={"/brand/5"}>
+                <Link className="mainPage-item" to={"/brand/1"}>
                     <h2 className="mainPage-item-head tolst"></h2>
                 </Link>
             </Col>
             <Col className='mainPage-item-conteine'  md={4}>
                 <Image className="mainPage-img" src={chex}></Image>
-                <Link className="mainPage-item" to={"/brand/6"}>
+                <Link className="mainPage-item" to={"/brand/2"}>
                     <h2 className="mainPage-item-head chex"></h2>
                 </Link>
             </Col>
             <Col className='mainPage-item-conteine' md={4}>
                 <Image className="mainPage-img" src={koft}></Image>
-                <Link className="mainPage-item" to={"/brand/4"}>
+                <Link className="mainPage-item" to={"/brand/3"}>
                     <h2 className="mainPage-item-head koft"></h2>
                 </Link>
             </Col>
