@@ -85,28 +85,28 @@ const Admin = () => {
                 variant="outline-dark"
                 className="mt-4 p-2"
             >
-                Add type
+                Добавить аниме
             </Button>
             <Button
                 onClick={() => setBrandVisible(true)}
                 variant="outline-dark"
                 className="mt-4 p-2"
             >
-                Add brand
+                Добавить тип одежды
             </Button>
             <Button
                 onClick={() => setDeviceVisible(true)}
                 variant="outline-dark"
                 className="mt-4 p-2"
             >
-                Add device
+                Добавить товар
             </Button>
             <Button
                 onClick={() => setDeleteBrandOrType(true)}
                 variant="outline-dark"
                 className="mt-4 p-2"
             >
-                Delete type of brand
+                Удалить товар или тип
             </Button>
             <CreateDevice show={deviceVisible} onHide={() => setDeviceVisible(false)}/>
             <CreateBrand show={brandVisible} onHide={() => setBrandVisible(false)}/>
@@ -119,8 +119,8 @@ const Admin = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    {filter === "All" ? <Dropdown.Item disabled>All</Dropdown.Item> : <Dropdown.Item onClick={() => setFilter("All")}>All</Dropdown.Item>}
-                    {filter === "Without Brand or Type" ? <Dropdown.Item disabled>Without Brand or Type</Dropdown.Item> : <Dropdown.Item onClick={() => setFilter("Without Brand or Type")}>Without Brand or Type</Dropdown.Item>}
+                    {filter === "All" ? <Dropdown.Item disabled>All</Dropdown.Item> : <Dropdown.Item onClick={() => setFilter("All")}>Все</Dropdown.Item>}
+                    {filter === "Without Brand or Type" ? <Dropdown.Item disabled>Без типа или бренда</Dropdown.Item> : <Dropdown.Item onClick={() => setFilter("Without Brand or Type")}>Without Brand or Type</Dropdown.Item>}
                 </Dropdown.Menu>
             </Dropdown>
 
@@ -130,14 +130,14 @@ const Admin = () => {
                     aria-describedby="inputGroup-sizing-default"
                     value={searchDevice}
                     onChange={e => setSearchDevice(e.target.value)}
-                    placeholder="Input device name..."
+                    placeholder="Введите название товара..."
                 />
                 <Button
                     onClick={fetchDevice}
                     variant="outline-dark"
                     className="ml-2"
                 >
-                    Search
+                    Поиск
                 </Button>
             </InputGroup>
 
@@ -157,27 +157,27 @@ const Admin = () => {
                                     </Row>
                                     <Row>
                                         <Col xs={12}>
-                                            Name: {name}
+                                            Название: {name}
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col xs={12}>
-                                            Price: {price}
+                                            Цена: {price}
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col xs={12}>
-                                            Brand: {brand?.name}
+                                            Тип: {brand?.name}
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col xs={12}>
-                                            Type: {type?.name}
+                                            Аниме: {type?.name}
                                         </Col>
                                     </Row>
                                 </Col>
                                 <Col xs={2}>
-                                    <NavLink to={DEVICE_EDIT_ROUTE + `/${id}`}>Edit</NavLink>
+                                    <NavLink to={DEVICE_EDIT_ROUTE + `/${id}`}>Изменить</NavLink>
                                 </Col>
                             </Row>
                         </ListGroup.Item>

@@ -131,7 +131,7 @@ const DevicePageEdit = () => {
                 <Col xs={12}>
                     <Row>
                         <Col xs={1} className="d-flex align-items-center">
-                            id:
+                            Номер:
                         </Col>
                         <Col xs={11}>
                             {deviceCurr.id}
@@ -140,7 +140,7 @@ const DevicePageEdit = () => {
                     {/*Brand*/}
                     <Row>
                         <Col xs={1} className="d-flex align-items-center">
-                            Brand:
+                            Тип:
                         </Col>
                         <Col xs={11}>
                             <Dropdown className="mt-2 mb-2">
@@ -170,7 +170,7 @@ const DevicePageEdit = () => {
                     {/*Type*/}
                     <Row>
                         <Col xs={1} className="d-flex align-items-center">
-                            Types:
+                            Аниме:
                         </Col>
                         <Col xs={11}>
                             <Dropdown className="mt-2 mb-2">
@@ -200,7 +200,7 @@ const DevicePageEdit = () => {
                     {/*Name*/}
                     <Row>
                         <Col xs={1} className="d-flex align-items-center">
-                            Name:
+                            Название:
                         </Col>
                         <Col xs={8}>
                             <Form.Control
@@ -216,7 +216,7 @@ const DevicePageEdit = () => {
                     {/*Name*/}
                     <Row className="mt-2">
                         <Col xs={1} className="d-flex align-items-center">
-                            Price:
+                            Цена:
                         </Col>
                         <Col xs={8}>
                             <Form.Control
@@ -233,11 +233,11 @@ const DevicePageEdit = () => {
                     {/*Name*/}
                     <Row className="mt-4">
                         <Col xs={3} className="d-flex flex-column justify-content-center text-center">
-                            Current Img: <br/>
+                            Текушее фото: <br/>
                             <Image style={{margin: "0 auto", marginTop: 15}} width={150} src={process.env.REACT_APP_API_URL + deviceCurr.img}/>
                         </Col>
                         {img && <Col xs={6} className="d-flex flex-column justify-content-center text-center">
-                            New Img: <br/>
+                            Новое фото: <br/>
                             <Image style={{margin: "0 auto", marginTop: 15}} width={150} src={img}/>
                         </Col>}
                         <Col xs={3} className="d-flex align-items-center">
@@ -251,12 +251,12 @@ const DevicePageEdit = () => {
 
                     {/*Characteristics*/}
                     <Row className="d-flex flex-column m-3">
-                        <h4>Characteristics</h4>
+                        <h4>Характеристики</h4>
                         <Button
                             variant="outline-dark"
                             onClick={() => addInfo()}
                         >
-                            Add new property
+                            Добавить новое поле
                         </Button>
                         {info.map((item, index) =>
                             <Row key={index} className="mt-3">
@@ -281,7 +281,7 @@ const DevicePageEdit = () => {
                                         variant="outline-danger"
                                         onClick={() => deleteInfo(item.number)}
                                     >
-                                        Delete new property
+                                        Удалить новое поле
                                     </Button>
                                 </Col>
                             </Row>
