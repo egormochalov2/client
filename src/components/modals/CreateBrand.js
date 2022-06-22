@@ -20,21 +20,21 @@ const CreateBrand = ({show, onHide}) => {
         >
             <Modal.Header closeButton>
                 <Modal.Title>
-                    Add new Brand
+                    Добавить тип
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form>
                     <Form.Control
-                        placeholder="Input name your brand..."
+                        placeholder="Напишите название..."
                         value={value}
                         onChange={e => setValue(e.target.value)}
                     />
                 </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="outline-danger" onClick={onHide}>Close</Button>
-                <Button variant="outline-success" onClick={() => addBrand()}>Add</Button>
+                <Button variant="outline-danger" onClick={onHide}>Закрыть</Button>
+                <Button variant="outline-success" onClick={() => addBrand()}>Добавить</Button>
             </Modal.Footer>
         </Modal>
     );

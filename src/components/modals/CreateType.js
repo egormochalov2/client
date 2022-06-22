@@ -21,26 +21,26 @@ const CreateType = ({show, onHide}) => {
         >
             <Modal.Header closeButton>
                 <Modal.Title>
-                    Add new Type
+                    Добавление аниме
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form>
                     <Form.Control
-                        placeholder="Input name your type..."
+                        placeholder="Напишите назание..."
                         onChange={e => setValue(e.target.value)}
                         value={value}
                     />
                     <Form.Control
-                        placeholder="Input color your type..."
+                        placeholder="Напишите цвет..."
                         onChange={e => setColor(e.target.value)}
                         value={color}
                     />
                 </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="outline-danger" onClick={onHide}>Close</Button>
-                <Button variant="outline-success" onClick={addType}>Add</Button>
+                <Button variant="outline-danger" onClick={onHide}>Закрыть</Button>
+                <Button variant="outline-success" onClick={addType}>Добавить</Button>
             </Modal.Footer>
         </Modal>
     );
