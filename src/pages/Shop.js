@@ -18,7 +18,7 @@ const Shop = observer(() => {
     useEffect(() => {
         fetchTypes().then(data => device.setTypes(data));
         fetchBrands().then(data => device.setBrands(data));
-        fetchDevice(null, null, 1, 9).then(data => {
+        fetchDevice(null, null, 1, 6).then(data => {
             device.setDevices(data.rows);
             device.setTotalCount(data.count);
         });
@@ -44,7 +44,7 @@ const Shop = observer(() => {
         <div className="mainPage-conteiner">
             <Col className='mainPage-item-conteine'  md={4}>
             <Image className="mainPage-img" src={tolst}></Image>
-                <Link className="mainPage-item" to={"/brand/1"}>
+                <Link className="mainPage-item" to={"/brand/3"}>
                     <h2 className="mainPage-item-head tolst"></h2>
                 </Link>
             </Col>
@@ -56,7 +56,7 @@ const Shop = observer(() => {
             </Col>
             <Col className='mainPage-item-conteine' md={4}>
                 <Image className="mainPage-img" src={koft}></Image>
-                <Link className="mainPage-item" to={"/brand/3"}>
+                <Link className="mainPage-item" to={"/brand/1"}>
                     <h2 className="mainPage-item-head koft"></h2>
                 </Link>
             </Col>
