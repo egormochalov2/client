@@ -75,7 +75,7 @@ const DeleteBrandOrType = ({show, onHide, showSuccessMsgFunc}) => {
                     </Dropdown.Menu>
                 </Dropdown>
 
-                Choose item of {brandOrType === "Brand" ? "Brand" : "Type"}
+                Выберите из {brandOrType === "Brand" ? "Типов" : "Аниме"}
                 <Dropdown className="mb-3" style={{margin: "0 auto"}}>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                         {brandOrType === "Brand" ? selectBrand.name : selectType.name}
