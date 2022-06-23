@@ -290,8 +290,8 @@ const DevicePageEdit = () => {
 
                     <Row className="mt-5">
                         <Col xs={12}>
-                            {isDisabledPutBtn ? <Button disabled>Update Device</Button> : <Button onClick={putDevice}>Update Device</Button>}
-                            <Button className="ml-5" variant="danger" onClick={handleShow}>Delete Device</Button>
+                            {isDisabledPutBtn ? <Button disabled>Обновить товар</Button> : <Button onClick={putDevice}>Update Device</Button>}
+                            <Button className="ml-5" variant="danger" onClick={handleShow}>Удалить товар</Button>
                         </Col>
                     </Row>
                 </Col>
@@ -299,14 +299,14 @@ const DevicePageEdit = () => {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Delete this device {deviceCurr.id}?</Modal.Title>
+                    <Modal.Title>Удалить товар {deviceCurr.id}?</Modal.Title>
                 </Modal.Header>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Закрыть
                     </Button>
                     <Button variant="primary" onClick={deleteDevice}>
-                        Delete
+                        Удалить
                     </Button>
                 </Modal.Footer>
             </Modal>

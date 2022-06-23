@@ -53,7 +53,7 @@ const DeleteBrandOrType = ({show, onHide, showSuccessMsgFunc}) => {
         >
             <Modal.Header closeButton>
                 <Modal.Title>
-                    Delete Type or Brand
+                    Удалить тип или аниме
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -63,15 +63,15 @@ const DeleteBrandOrType = ({show, onHide, showSuccessMsgFunc}) => {
                     </>
                 }
 
-                Choose Category:
+                Выберите категорию:
                 <Dropdown className="mb-3" style={{margin: "0 auto"}}>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                         {brandOrType}
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                        {brandOrType === "Brand" ? <Dropdown.Item disabled>Brand</Dropdown.Item> : <Dropdown.Item onClick={() => setBrandOrType("Brand")}>Brand</Dropdown.Item>}
-                        {brandOrType === "Type" ? <Dropdown.Item disabled>Type</Dropdown.Item> : <Dropdown.Item onClick={() => setBrandOrType("Type")}>Type</Dropdown.Item>}
+                        {brandOrType === "Brand" ? <Dropdown.Item disabled>Тип</Dropdown.Item> : <Dropdown.Item onClick={() => setBrandOrType("Brand")}>Brand</Dropdown.Item>}
+                        {brandOrType === "Type" ? <Dropdown.Item disabled>Аниме</Dropdown.Item> : <Dropdown.Item onClick={() => setBrandOrType("Type")}>Type</Dropdown.Item>}
                     </Dropdown.Menu>
                 </Dropdown>
 
@@ -98,8 +98,8 @@ const DeleteBrandOrType = ({show, onHide, showSuccessMsgFunc}) => {
 
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="outline-danger" onClick={onHide}>Close</Button>
-                <Button variant="outline-success" onClick={Delete}>Delete</Button>
+                <Button variant="outline-danger" onClick={onHide}>Закрыть</Button>
+                <Button variant="outline-success" onClick={Delete}>Удалить</Button>
             </Modal.Footer>
         </Modal>
     );
