@@ -73,7 +73,7 @@ const OneItemInBasket = observer(({device}) => {
                         <Row>
                             <Col xs={12} className="button-delite-conteiner">
                                 {user.isAuth ? <button className='button-delite'  onClick={() => basket.setDeleteItemBasket(device, true)}><Image width={15} height={15} src={krest}></Image></button>
-                                    : <button className='button-delite'  onClick={() => basket.setDeleteItemBasket(device)}>Удалить</button>
+                                    : <button className='button-delite'  onClick={() => basket.setDeleteItemBasket(device)}><Image width={15} height={15} src={krest}></Image></button>
                                 }
                             </Col>
                         </Row>
